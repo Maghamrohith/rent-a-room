@@ -1,0 +1,31 @@
+<h2> Listing rooms </h2>
+<table border=1>
+<thead>
+<tr>
+<th>name </th>
+<th>descrption</th>
+<th>price</th>
+<th>rules</th>
+<th>images</th>
+<th>Address</th>
+<th>latitude</th>
+<th>longitude</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<% @rooms.each do |room| %>
+
+<td><%= room.name %></td>
+<td><%= room.description %></td>
+<td><%= room.price %></td>
+<td><%= room.rules %></td>
+<td><%= room.images %></td>
+<td><%= room.address %></td>
+<td><%= room.latitude %></td>
+<td><%= room.longitude %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to "add room",new_room_path %>

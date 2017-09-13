@@ -1,0 +1,5 @@
+<%=@city.name %>
+
+<%= link_to "Edit", edit_city_path(@city.id) %>
+<%= link_to "destroy", city_path(@city.id), method: :delete, data: {confirm: "Are you sure"} %>
+<%= link_to "listing cities", cities_path %>

@@ -1,0 +1,7 @@
+<h2>Listing aminities </h2>
+<% @amenities.each do |amenity| %>
+	Name - <%= amenity.name %><br>
+	Description - <%= amenity.description %><br>
+	<% end %>
+	<%= link_to "new amenity",new_amenity_path %>
+

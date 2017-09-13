@@ -1,0 +1,36 @@
+<h2>Adding the room </h2>
+<%= form_for @room do |f| %>
+<% if @room.errors.any? %>
+<h3> these errors prohibited the form to be  saved </h3>
+<ul>
+<% @room.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+
+
+</ul>
+
+<% end %>
+
+
+
+<label>name</label></br>
+<%= f.text_field :name %> <br>
+<label>description</label><br>
+<%= f.text_area :description %><br>
+<label>price</label><br>
+<%= f.text_field :price %><br>
+<label>rules</label><br>
+<%= f.text_field :rules %><br>
+<label>address</label><br>
+<%= f.text_area :address %><br>
+<label>images</label><br>
+<%= f.file_field :images%><br>
+
+<label>city name </label>
+<%= f.collection_select :city_id, City.all, :id, :name, prompt: "select city "
+ %>
+ <label>Amenity </label>
+ <%= f.collection_check_boxes :amenity_ids, Amenity.all, :id, :name %>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h2> edit City </h2>
+<%= form_for @city do |f| %>
+
+<div class ="field">
+<%= f.label :cityname %>
+<%= f.text_field :name %>
+<div class ="actions" %>
+<%= f.submit %>
+<% end %>

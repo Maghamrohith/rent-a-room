@@ -1,0 +1,19 @@
+<h2>editing room </h2>
+<%= form_for @room do |f| %>
+
+<label>name</label><br>
+<%= f.text_field :name %><br>
+<label>description</label><br>
+<%= f.text_area :description %><br>
+<label>price</label><br>
+<%= f.text_field :price %><br>
+<label>rules</label><br>
+<%= f.text_field :rules %><br>
+<label>images</label><br>
+<%= f.file_field :images%><br>
+
+<label>address</label><br>
+<%= f.text_area :address %><br>
+
+<%= f.submit %>
+<% end %>

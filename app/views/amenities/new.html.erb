@@ -1,0 +1,11 @@
+<h2>Add aminities </h2>
+<%= form_for  @amenity do |f| %>
+	<div class ="field">
+	<%= f.label :name  %>
+	<%= f.text_field :name %><br>
+	<div class ="text" >
+	<%= f.label :description %>
+	<%= f.text_area :description %><br>
+	<div class ="actions">
+	<%= f.submit %>
+	<% end %>
