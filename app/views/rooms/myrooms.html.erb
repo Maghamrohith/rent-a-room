@@ -1,0 +1,12 @@
+<h2>Listing Rooms </h2>
+<% if @rooms.empty? %>
+	<h4>NO rooms</h4>
+<% else %>
+<% @rooms.each do |room| %>
+	<li>
+	<p>Name:<%= room.name %></p>
+	<p>Description:<%= room.description %></p>
+	<P>Address:<%= room.address %></P>
+	<% end %>
+	</li>
+<% end %>

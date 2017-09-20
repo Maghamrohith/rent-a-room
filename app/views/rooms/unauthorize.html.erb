@@ -1,0 +1,13 @@
+
+
+<% @room.each do |n| %>
+<ol>
+<%= n.name  %>
+
+</ol>
+
+<%= form_for n do |t| %>
+	<%= t.hidden_field :is_authorized, value:true %>
+	<%= t.submit "authorize" %>
+	<% end %>
+<% end %>

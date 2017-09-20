@@ -1,0 +1,8 @@
+<h2>Dashboard</h2>
+
+<%@bookings.each do |booking| %><br>
+StartDate-<%= booking.start_date %><br>
+EndDate-<%=booking.end_date %><br>
+Name-<%=booking.user.username %><br>
+HotelName-<%=booking.room.name %><br>
+<% end %> 

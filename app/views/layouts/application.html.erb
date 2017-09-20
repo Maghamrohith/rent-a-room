@@ -14,7 +14,15 @@
        <%= current_user.username %>
        <%= link_to"AccountSetting",edit_user_registration_path %>
        <%= link_to"logout",destroy_user_session_path, method: :delete %>
+       <%= link_to "cities", cities_path %>
+       <%= link_to "rooms", rooms_path %>
+       <% if current_user.role?("admin")%>
+       <%= link_to "unauthorized_rooms", rooms_unauthorize_path %>
+       <% end %>
+      
+
        <% else %>
+
        <%= link_to"login",new_user_session_path %> | <%= link_to "Register",new_user_registration_path %>
        <% end %>
        

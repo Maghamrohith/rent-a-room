@@ -2,17 +2,19 @@ class Ability
  include CanCan::Ability
      def initialize(user)
      if user.role? "admin"
-      can :manage, [City, Amenity ,Room]
+      can :manage, :all
      elsif user.role? "host"
+      can :read, [City, Room]
+      can :create, [Room]
+      can :myrooms, [Room]
        can [:update, :destroy], Room do |room|
         room.user_id = user.id
-       can :read, [City, Amenity]
      end
 
      else
       user.role? "guest"
       can :create, [Room]
-      can :read, [City]
+      can :read, [City, Room]
      
 
     end

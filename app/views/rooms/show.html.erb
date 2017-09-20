@@ -1,3 +1,4 @@
+<%= link_to"special Price",special_prices_path %>
 <p>
 <strong>name:</strong>
 <%= @room.name  %>
@@ -35,7 +36,14 @@
 <strong>longitude</strong>
 <%= @room.longitude %>
 </p>
-
+<%= form_for @booking do |n| %>
+<%= n.label "start_date" %><br>
+<%= n.date_select :start_date %><br>
+<%= n.label "end_date" %><br>
+<%= n.date_select :end_date %><br>
+<%= n.hidden_field :room_id, value:@room.id %>
+<%= n.submit "book" %>
+<% end %>
 
 <%= link_to "Edit", edit_room_path(@room.id) %>
 <%= link_to "destroy", room_path(@room.id), method: :delete, data: {confirm: "Are you sure"} %>

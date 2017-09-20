@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  
+  get '/rooms/myrooms'
+  get '/rooms/unauthorize'
   devise_for :users
   resources :cities
   resources :rooms
   resources :amenities
+  resources :bookings
+  resources :dashboard
+  resources :special_prices
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
