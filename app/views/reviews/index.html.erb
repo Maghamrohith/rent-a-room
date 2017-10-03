@@ -1,0 +1,9 @@
+<% @reviews.each do |review| %>
+<% if @reviews.empty? %>
+<p>No Reviews Found </p>
+<% else %>
+<% @reviews.each do |review| %>
+<p>Review - <%= review.review %></p>
+<p>Name - <%= review.room.name %></p>
+<% end %>
+<% end %>

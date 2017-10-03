@@ -1,5 +1,6 @@
 class Room < ActiveRecord::Base
 	mount_uploader :images, CoverUploader
+	has_many :special_prices
 	has_many :bookings
 	belongs_to :city
 	belongs_to :user

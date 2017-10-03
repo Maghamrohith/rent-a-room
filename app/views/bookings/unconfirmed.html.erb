@@ -1,0 +1,8 @@
+<% @bookings.each do |booking| %>
+
+
+<%= form_for booking do |t| %>
+	<%= t.hidden_field :is_confirmed, value:true %>
+	<%= t.submit  %>
+	<% end %>
+<% end %>

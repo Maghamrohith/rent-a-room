@@ -1,14 +1,15 @@
 <h2>Special Price</h2>
-<%= form_for @special_price do |f| %>
-	<%=f.label :start_date %>
-	<%=f.date_select :start_date %>
+<%= form_for @special_price, url: room_special_prices_path, method: :post do |f| %>
+	<%=f.label :start_date %><br>
+	<%=f.date_select :start_date %><br>
 
-	<%=f.label :end_date %>
-	<%=f.date_select :end_date %>
+	<%=f.label :end_date %><br>
+	<%=f.date_select :end_date %><br>
 
-	<%=f.hidden_field :room_id, value:@room.id %>
+	
 
-	<%= f.label :price %>
-	<%=f.number_field :price %>
+	<%= f.label :price %><br>
+	<%=f.number_field :price %><br>
 
-	<%f.submit
+	<%= f.submit"submit" %>
+	<% end %>

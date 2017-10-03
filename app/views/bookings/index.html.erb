@@ -1,6 +1,7 @@
 <% @bookings.each do |booking| %>
-<%= booking.start_date %><br>
-<%= booking.end_date %><br>
+StartDate-<%= booking.start_date %><br>
+EndDate-<%= booking.end_date %><br>
+Price-<%= booking.price %><br>
 <% end %>
 
 <%= link_to "show", rooms_path %>

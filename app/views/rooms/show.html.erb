@@ -1,4 +1,6 @@
-<%= link_to"special Price",special_prices_path %>
+<%if @room.user_id == current_user.id %>
+<%= link_to"special Price",new_room_special_price_path(@room.id) %>
+<% end %>
 <p>
 <strong>name:</strong>
 <%= @room.name  %>
